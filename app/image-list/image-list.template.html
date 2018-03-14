@@ -1,48 +1,48 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <div>
-                <h3>TOP 3 categories</h3>
+     <div ng-repeat="item in $ctrl.items">
+         <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
+             <div class="panel panel-success" style="height: 400px;">
 
-                <button type="button" class="btn btn-primary"  ng-model="singleModel"> first category </button>
-                <button type="button" class="btn btn-primary"  ng-model="singleModel">  category </button>
-                <button type="button" class="btn btn-primary"  ng-model="singleModel"> some category </button>
-                <button type="button" class="btn btn-primary"  ng-model="singleModel"> smile </button>
-                <button type="button" class="btn btn-primary"  ng-model="singleModel"> first category </button>
+                 <div class="panel-heading">
+                     <!--Title-->
+                     <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
+                     <!--Text-->
+                     <p class="card-text">
+                         <date>{{item.datetime | date:'medium'}}</date>
+                     </p>
+                 </div>
 
-            </div>
+                 <div class="panel-body">
+                     <!--image-->
+                     <a href="{{item.link}}" >
+                         <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
+                     </a>
+                 </div>
 
-            <div>
-                <h4>Search</h4>
-                <input placeholder="category name"/>
-            </div>
-        </div>
-
-        <div class="col-md-10">
-
-        <div ng-repeat="item in $ctrl.items">
-            <div class="panel panel-success">
-                <div class="panel-body">
-                    <!--image-->
-                    <a href="{{item.link}}" >
-                        <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
-                    </a>
-                </div>
-
-                <div class="panel-heading">
-                    <!--Title-->
-                    <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
-                    <!--Text-->
-                    <p class="card-text">
-                        <date>{{item.datetime | date:'medium'}}</date>
-                    </p>
-                </div>
-            </div>
+             </div>
+         </div>
+     </div>
 
 
-        </div>
-    </div>
 
-    </div>
 
-</div>
+<!--<div ng-repeat="item in $ctrl.items">-->
+    <!--<div class="panel panel-success">-->
+        <!--<div class="panel-body">-->
+            <!--&lt;!&ndash;image&ndash;&gt;-->
+            <!--<a href="{{item.link}}" >-->
+                <!--<img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>-->
+            <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="panel-heading">-->
+            <!--&lt;!&ndash;Title&ndash;&gt;-->
+            <!--<h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>-->
+            <!--&lt;!&ndash;Text&ndash;&gt;-->
+            <!--<p class="card-text">-->
+                <!--<date>{{item.datetime | date:'medium'}}</date>-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+<!--</div>-->

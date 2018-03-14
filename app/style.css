@@ -22,6 +22,10 @@
     text-overflow: ellipsis; /* Многоточие */
 }
 
+.menu {
+    margin:  10px;
+}
+
 
 
 /*
