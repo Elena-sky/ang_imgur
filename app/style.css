@@ -26,6 +26,14 @@
     margin:  10px;
 }
 
+.categ {
+    display: inline-flex;
+}
+
+.b {
+    margin-left: 5px;
+}
+
 
 
 /*

@@ -3,5 +3,6 @@
 angular.module('myApp', [
     // ...which depends on the `imageList` module
     'imgCategories',
-    'imageList'
+    'imageList',
+    'tagsSearch'
 ]);

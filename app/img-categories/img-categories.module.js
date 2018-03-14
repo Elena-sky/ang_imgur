@@ -1,4 +1,5 @@
-// Define the `imageList` module
+// Define the `imgCategories` module
 angular.module('imgCategories', [
-    'imageList'
+    'imageList',
+    'tagsSearch'
 ]);
