@@ -2,10 +2,13 @@
     <div class="row">
         <div  class="col-sm-12 row menu">
             <div class="col-sm-10 ">
-                <h3>TOP 5 categories</h3>
+                <h3>Search by tag</h3>
+
+                <input ng-model="$ctrl.query" placeholder="category name" />
+
                     <span class="categ">
-                        <div ng-repeat="category in $ctrl.cat">
-                            <button type="button" class="b btn btn-primary"><category>{{category.name}}</category></button>
+                        <div ng-repeat="category in $ctrl.cat | filter:$ctrl.query">
+                            <button type="button" class="b btn btn-primary"><category>{{category.display_name}}</category></button>
                         </div>
                     </span>
             </div>
