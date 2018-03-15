@@ -9,6 +9,9 @@
                      <p class="card-text">
                          <date>{{item.datetime | date:'medium'}}</date>
                      </p>
+                     <div class="categ" ng-repeat="tag in item.tags">
+                         <tags>{{tag.display_name}}, </tags>
+                     </div>
                  </div>
 
                  <div class="panel-body">
@@ -17,11 +20,17 @@
                          <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
                      </a>
                  </div>
-
              </div>
          </div>
      </div>
 
+
+     <!--<ul class="phones">-->
+         <!--<li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">-->
+             <!--<span>{{phone.name}}</span>-->
+             <!--<p>{{phone.snippet}}</p>-->
+         <!--</li>-->
+     <!--</ul>-->
 
 
 
