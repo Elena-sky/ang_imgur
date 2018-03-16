@@ -10,7 +10,7 @@
                          <date>{{item.datetime | date:'medium'}}</date>
                      </p>
                      <div class="categ" ng-repeat="tag in item.tags">
-                         <tags>{{tag.display_name}}, </tags>
+                         <tags ng-if="tag">Теги: {{tag.display_name}}, </tags>
                      </div>
                  </div>
 
@@ -23,35 +23,3 @@
              </div>
          </div>
      </div>
-
-
-     <!--<ul class="phones">-->
-         <!--<li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">-->
-             <!--<span>{{phone.name}}</span>-->
-             <!--<p>{{phone.snippet}}</p>-->
-         <!--</li>-->
-     <!--</ul>-->
-
-
-
-<!--<div ng-repeat="item in $ctrl.items">-->
-    <!--<div class="panel panel-success">-->
-        <!--<div class="panel-body">-->
-            <!--&lt;!&ndash;image&ndash;&gt;-->
-            <!--<a href="{{item.link}}" >-->
-                <!--<img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>-->
-            <!--</a>-->
-        <!--</div>-->
-
-        <!--<div class="panel-heading">-->
-            <!--&lt;!&ndash;Title&ndash;&gt;-->
-            <!--<h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>-->
-            <!--&lt;!&ndash;Text&ndash;&gt;-->
-            <!--<p class="card-text">-->
-                <!--<date>{{item.datetime | date:'medium'}}</date>-->
-            <!--</p>-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-<!--</div>-->

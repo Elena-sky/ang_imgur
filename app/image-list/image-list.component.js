@@ -1,3 +1,5 @@
+'use strict';
+
 // Register the `imageList` component on the `imageList` module,
 angular
     .module('imageList', [])
