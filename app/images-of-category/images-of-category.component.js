@@ -19,6 +19,7 @@
 );
 
 
+
 // .
 // component('imagesOfCategory', {
 //     template: 'TBD: Detail view for <span>{{$ctrl.categoryName}}</span>',
