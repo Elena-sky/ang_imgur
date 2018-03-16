@@ -1,25 +1,15 @@
 <div class="container-fluid">
-    <div class="row">
-        <div  class="col-sm-12 row menu">
-            <div class="col-sm-10 ">
-                <h3>Search by tags</h3>
+    <div  class="col-sm-12 row menu ">
 
-                <input ng-model="$ctrl.query" placeholder="category name" />
-
-                    <span class="categ">
-                        <div ng-repeat="category in $ctrl.cat | filter:$ctrl.query">
-                            <button type="button" class="b btn btn-primary"><category>{{category.display_name}}</category></button>
-                        </div>
-                    </span>
-            </div>
-
-            <!--<div class="col-sm-2">-->
-                <!--<tags-search></tags-search>-->
-            <!--</div>-->
+        <div class="col-sm-3 menu">
+            <input ng-model="$ctrl.query" placeholder="Search by tags" />
         </div>
 
-        <div class="col-md-12">
-            <image-list></image-list>
+        <div class="col-sm-9 row buttons">
+            <div ng-repeat="category in $ctrl.cat | filter:$ctrl.query | limitTo : 10">
+                <a href="#!/tag/{{category.name}}" class="b btn btn-primary btn-menu" alt="{{category.name}}"
+                   role="button" aria-pressed="true"><category>{{category.display_name}}</category></a>
+            </div>
         </div>
 
     </div>

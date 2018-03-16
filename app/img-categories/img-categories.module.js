@@ -1,5 +1,8 @@
+'use strict';
+
 // Define the `imgCategories` module
 angular.module('imgCategories', [
-    'imageList',
-    'tagsSearch'
+    'ngRoute',
+    // 'imageList',
+    // 'tagsSearch',
 ]);
