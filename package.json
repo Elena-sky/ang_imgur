@@ -7,9 +7,8 @@
   "main": "app.js",
   "license": "MIT",
   "devDependencies": {
-    "@angular/cli": "^1.4.9",
-    "@angular/compiler-cli": "^4.4.6",
-    "bower": "^1.7.7",
+    "@angular/cli": "^1.7.3",
+    "bower": "^1.8.2",
     "enhanced-resolve": "^3.3.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
@@ -22,10 +21,16 @@
     "typescript": "~2.3.3"
   },
   "dependencies": {
+    "@angular/common": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "@angular/http": "^5.2.9",
+    "@angular/platform-browser": "^5.2.9",
     "angular-in-memory-web-api": "^0.5.4",
-    "bower": "^1.7.7",
+    "bower": "^1.8.2",
     "express": "^4.16.2",
-    "ng-infinite-scroll": "^1.3.0"
+    "ng-infinite-scroll": "^1.3.0",
+    "rxjs": "^5.5.7",
+    "zone.js": "^0.8.20"
   },
   "scripts": {
     "postinstall": "bower install",
