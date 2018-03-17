@@ -6,11 +6,17 @@
         </div>
 
         <div class="col-sm-9 row buttons">
+
+            <div>
+                <a href="#!/images" class="b btn btn-warning btn-menu"
+                   role="button" aria-pressed="true">All images</a>
+            </div>
+
             <div ng-repeat="category in $ctrl.cat | filter:$ctrl.query | limitTo : 10">
-                <a href="#!/tag/{{category.name}}" class="b btn btn-primary btn-menu" alt="{{category.name}}"
+                <a href="#!/tag/{{category.name}}" class="b btn btn-info btn-menu" alt="{{category.name}}"
                    role="button" aria-pressed="true"><category>{{category.display_name}}</category></a>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>

@@ -26,9 +26,9 @@
     margin:  10px;
 }
 
-.categ {
-    display: inline-flex;
-}
+/*.categ {*/
+    /*display: inline-flex;*/
+/*}*/
 
 .btn-menu {
     margin: 5px;
@@ -40,5 +40,9 @@
 
 .b {
     margin-left: 5px;
+}
+
+.tag-name {
+    margin: 20px;
 }
 

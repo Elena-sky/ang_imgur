@@ -1,1 +1,33 @@
-<p>картинки по тегу {{category.name}}</p>
+<div class="tag-name">
+    <h3>картинки по тегу
+        <b>{{$ctrl.tagSearch}}</b>
+    </h3>
+</div>
+
+
+<div ng-repeat="item in $ctrl.imgArr">
+    <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
+        <div class="panel panel-success" style="height: 400px;">
+
+            <div class="panel-heading">
+                <!--Title-->
+                <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
+                <!--Text-->
+                <p class="card-text">
+                    <date>{{item.datetime | date:'medium'}}   </date>
+
+                </p>
+
+                    <!--Tags:-->
+                    <!--<tags ng-repeat="tag in item.tags" ng-if="tag">{{tag.display_name}}, </tags>-->
+            </div>
+
+            <div class="panel-body">
+                <!--image-->
+                <a href="{{item.link}}" >
+                    <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
