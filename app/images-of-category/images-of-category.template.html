@@ -4,8 +4,11 @@
     </h3>
 </div>
 
+<div ng-if="$ctrl.imgSearch < 1">
+    data not found
+</div>
 
-<div ng-repeat="item in $ctrl.imgArr">
+<div ng-repeat="item in $ctrl.imgSearch">
     <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
         <div class="panel panel-success" style="height: 400px;">
 
@@ -31,3 +34,4 @@
         </div>
     </div>
 </div>
+
