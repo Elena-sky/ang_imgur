@@ -7,7 +7,7 @@ config(['$locationProvider', '$routeProvider',
         when('/images', {
             template: '<image-list></image-list>'
         }).
-        when('/tag/:categoryName', {
+        when('/tag/:categoryName/:pageNum', {
             template: '<images-of-category></images-of-category>'
 
         }).
@@ -17,18 +17,3 @@ config(['$locationProvider', '$routeProvider',
     }
 ]);
 
-
-
-// config(function config($routeProvider) {
-//         $routeProvider
-//             .when('/images', {
-//                 template: '<img-categories></img-categories>'
-//         }).
-//         // when('/tag/:categoryName', {
-//         //     template: '<images-of-category></images-of-category>'
-//         // }).
-//         otherwise({
-//             redirectTo:'/images'
-//         });
-//     }
-// );

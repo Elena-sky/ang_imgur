@@ -11,8 +11,10 @@ angular
             templateUrl: 'img-categories/img-categories.template.html',
             controller:
                 function ($http) {
+                    var self = this;
+                    self.page = 1;
 
-                        $http.get('https://api.imgur.com/3/tags')
+                    $http.get('https://api.imgur.com/3/tags')
                             .then(result => {
                                 this.cat = result.data.data.tags;
 
