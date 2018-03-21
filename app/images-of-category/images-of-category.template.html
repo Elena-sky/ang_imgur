@@ -1,56 +1,106 @@
-<div class="alert alert-success tag-name" ng-if="$ctrl.imgSearch.length > 0">
-    <h3>Images of tag
-        <b>{{$ctrl.tagSearch}}</b>
-    </h3>
+<!--Loader:-->
+<div class="col-sm-12">
+    <div id="floatingBarsG">
+        <div class="blockG" id="rotateG_01"></div>
+        <div class="blockG" id="rotateG_02"></div>
+        <div class="blockG" id="rotateG_03"></div>
+        <div class="blockG" id="rotateG_04"></div>
+        <div class="blockG" id="rotateG_05"></div>
+        <div class="blockG" id="rotateG_06"></div>
+        <div class="blockG" id="rotateG_07"></div>
+        <div class="blockG" id="rotateG_08"></div>
+    </div>
 </div>
-
-<div class="alert alert-danger tag-name" ng-if="$ctrl.imgSearch.length < 1">
-    <h3>
-        <strong>Error!</strong>
-        Image with tag {{$ctrl.tagSearch}} not found.
-    </h3>
-</div>
-
-<nav aria-label="Page navigation">
-    <ul class="pagination  justify-content-center">
-        <li class="page-item">
-            <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.previous}}">Previous</a>
-        </li>
-
-        <li class="page-item">
-            <a class="page-link" href="#">currentPage={{$ctrl.page}}</a>
-        </li>
-
-        <li class="page-item">
-            <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.next}}">Next</a>
-        </li>
-    </ul>
-</nav>
+<!--End Loader-->
 
 
-<div ng-repeat="item in $ctrl.imgSearch">
-    <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
-        <div class="panel panel-success" style="height: 400px;">
+<div id="container" class="displayNone">
+    <div class="col-sm-12">
 
-            <div class="panel-heading">
-                <!--Title-->
-                <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
-                <!--Text-->
-                <p class="card-text">
-                    <date>{{item.datetime | date:'medium'}}   </date>
+        <!--Navigation:-->
+        <nav aria-label="breadcrumb" ng-if="$ctrl.imgSearch.length > 0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#!/images">Ang-imgur</a></li>
+                <li class="breadcrumb-item" aria-current="page">Images of tag
+                    <b>{{$ctrl.tagSearch}}</b></li>
+            </ol>
+        </nav>
+        <!--End Navigation-->
 
-                </p>
 
-                    <!--Tags:-->
-                    <!--<tags ng-repeat="tag in item.tags" ng-if="tag">{{tag.display_name}}, </tags>-->
-            </div>
+        <!--Alert Error:-->
+        <div class="alert alert-danger tag-name" ng-if="$ctrl.imgSearch.length < 1">
+            <h3>
+                <strong>Error!</strong>
+                Image with tag {{$ctrl.tagSearch}} not found.
+            </h3>
+        </div>
+        <!--End Alert Error-->
 
-            <div class="panel-body">
-                <!--image-->
-                <a href="{{item.link}}" >
-                    <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
-                </a>
+
+        <!--Pagination:-->
+        <ul class="pagination justify-content-center" ng-if="$ctrl.imgSearch.length > 0">
+            <li class="page-item">
+                <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.previous}}">Previous</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#">Page {{$ctrl.page}}</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.next}}">Next</a>
+            </li>
+        </ul>
+        <!--End Pagination-->
+
+
+        <!--Images-->
+        <div ng-repeat="item in $ctrl.imgSearch">
+            <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
+                <div class="panel panel-success" style="height: 400px;">
+
+                    <div class="panel-heading">
+                        <!--Title-->
+                        <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
+                        <!--Text-->
+                        <p class="card-text">
+                            <date>{{item.datetime | date:'medium'}}</date>
+                        </p>
+
+                        <!--Tags:-->
+                        <!--<tags ng-repeat="tag in item.tags" ng-if="tag">{{tag.display_name}}, </tags>-->
+                    </div>
+
+                    <div class="panel-body">
+                        <!--image-->
+                        <a href="{{item.link}}" >
+                            <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+        <!--End Images-->
+
+
+        <!--Pagination:-->
+        <div  class="col-sm-12" ng-if="$ctrl.imgSearch.length > 0">
+            <ul class="pagination  justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.previous}}">Previous</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">Page {{$ctrl.page}}</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#!/tag/{{$ctrl.tagSearch}}/{{$ctrl.next}}">Next</a>
+                </li>
+            </ul>
+        </div>
+        <!--End Pagination-->
+
     </div>
 </div>

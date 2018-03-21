@@ -19,9 +19,14 @@ angular.
 
                     .then(result => {
                         this.imgSearch = result.data.data;
-                        console.log(result.data.data);
+
+                        $( document ).ready(function() {
+                            $( "#floatingBarsG" ).hide();
+                            $('#container').removeClass( "displayNone" );
+                        });
 
                     });
+
                 }
              ]
 });

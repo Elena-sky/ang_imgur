@@ -9,20 +9,24 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+        <!--Search:-->
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" aria-label="Search" ng-model="$ctrl.query" placeholder="Search by tags" />
         </form>
+        <!--End Search-->
 
+        <!--All images:-->
         <div class="nav-item">
-            <!--All images:-->
             <a class="nav-link btn btn-outline-success my-2 my-sm-0"  href="#!/images"
                role="button" aria-pressed="true">
                 All images
             </a>
         </div>
+        <!--End All images-->
 
+        <!--Tags:-->
         <ul class="navbar-nav mr-auto">
-            <!--Tags:-->
+
             <li class="nav-item" ng-repeat="category in $ctrl.cat | filter:$ctrl.query | limitTo : 10">
                 <a class="nav-link" href="#!/tag/{{category.name}}/{{$ctrl.page}}">
                     <button type="button" class="btn btn-outline-dark">{{category.display_name}}</button>
@@ -30,6 +34,7 @@
             </li>
 
         </ul>
+        <!--End Tags-->
 
     </div>
 

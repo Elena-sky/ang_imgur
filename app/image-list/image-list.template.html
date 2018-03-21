@@ -1,25 +1,24 @@
-     <div ng-repeat="item in $ctrl.items">
-         <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
-             <div class="panel panel-success" style="height: 400px;">
+<!--Images:-->
+<div ng-repeat="item in $ctrl.items">
+    <div class="col-lg-4 col-md-6 col-sm-12 imgPad ">
+        <div class="panel panel-success" style="height: 400px;">
 
-                 <div class="panel-heading">
-                     <!--Title-->
-                     <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
-                     <!--Text-->
-                     <p class="card-text">
-                         <date>{{item.datetime | date:'medium'}}</date>
-                     </p>
-                     <div class="categ" ng-repeat="tag in item.tags">
-                         <tags ng-if="tag">Теги: {{tag.display_name}}, </tags>
-                     </div>
-                 </div>
+            <div class="panel-heading">
+                <!--Title-->
+                <h4 class="card-title" id="textSize"><description>{{item.title}}</description></h4>
+                <!--Text-->
+                <p class="card-text">
+                    <date>{{item.datetime | date:'medium'}}</date>
+                </p>
+            </div>
 
-                 <div class="panel-body">
-                     <!--image-->
-                     <a href="{{item.link}}" >
-                         <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
-                     </a>
-                 </div>
-             </div>
-         </div>
-     </div>
+            <div class="panel-body">
+                <!--image-->
+                <a href="{{item.link}}" >
+                    <img ng-src="{{item.images[0].link || item.link}}" id="sizeImg"></img>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Images-->
