@@ -1,22 +1,36 @@
-<div class="container-fluid">
-    <div  class="col-sm-12 row menu ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <div class="col-sm-3 menu">
-            <input ng-model="$ctrl.query" placeholder="Search by tags" />
+    <a class="navbar-brand" href="#!/images">
+        <h1>Ang-imgur</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" aria-label="Search" ng-model="$ctrl.query" placeholder="Search by tags" />
+        </form>
+
+        <div class="nav-item">
+            <!--All images:-->
+            <a class="nav-link btn btn-outline-success my-2 my-sm-0"  href="#!/images"
+               role="button" aria-pressed="true">
+                All images
+            </a>
         </div>
 
-        <div class="col-sm-9 row buttons">
+        <ul class="navbar-nav mr-auto">
+            <!--Tags:-->
+            <li class="nav-item" ng-repeat="category in $ctrl.cat | filter:$ctrl.query | limitTo : 10">
+                <a class="nav-link" href="#!/tag/{{category.name}}/{{$ctrl.page}}">
+                    <button type="button" class="btn btn-outline-dark">{{category.display_name}}</button>
+                </a>
+            </li>
 
-            <div>
-                <a href="#!/images" class="b btn btn-warning btn-menu"
-                   role="button" aria-pressed="true">All images</a>
-            </div>
+        </ul>
 
-            <div ng-repeat="category in $ctrl.cat | filter:$ctrl.query | limitTo : 10">
-                <a href="#!/tag/{{category.name}}/{{$ctrl.page}}" class="b btn btn-info btn-menu" alt="{{category.name}}"
-                   role="button" aria-pressed="true"><category>{{category.display_name}}</category></a>
-            </div>
-
-        </div>
     </div>
-</div>
+
+</nav>
