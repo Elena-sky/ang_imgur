@@ -4,7 +4,7 @@ This project is a display of images using the service https://imgur.com/.
 
 In the application you can view all the latest uploaded images on imgur. Also in ang-imgur realized the output by category, search by category and pagination.
 
-##Demo: http://betterimages.01g.info/#!/images
+## Demo: http://betterimages.01g.info/#!/images
 
 
 ## Tools
