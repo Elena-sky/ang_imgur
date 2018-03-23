@@ -12,6 +12,8 @@ In the application you can view all the latest uploaded images on imgur. Also in
 - Bootstrap
 
 
+##Demo: http://betterimages.01g.info/#!/images
+
 ## AngularJs
 
 For more information on AngularJS please check out [angularjs.org][angularjs].
