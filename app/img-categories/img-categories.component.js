@@ -14,7 +14,9 @@ angular
                     var self = this;
                     self.page = 1;
 
-                    $http.get('https://api.imgur.com/3/tags')
+                    $http.get('https://api.imgur.com/3/tags', {
+                        headers: {'Authorization': 'Client-ID b82eca036063cec'},
+                    })
                             .then(result => {
                                 this.cat = result.data.data.tags;
 
