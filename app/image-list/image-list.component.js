@@ -11,7 +11,9 @@ angular
                     this.$onInit = function () {
                     // noinspection JSAnnotator
 
-                        $http.get('https://api.imgur.com/3/gallery/hot/viral/0.json')
+                        $http.get('https://api.imgur.com/3/gallery/hot/viral/0.json', {
+                            headers: {'Authorization': 'Client-ID b82eca036063cec'},
+                        })
                         .then(result => {
                             this.items = result.data.data;
                         });
